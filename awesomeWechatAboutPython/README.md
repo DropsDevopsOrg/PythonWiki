@@ -6,7 +6,7 @@
 
 ## [Python研发]()
 
-*python 、爬虫、扫描、安全 、运维 *
+*python 、爬虫、扫描、安全 、运维*
 
 - [Python程序员](#Python程序员)：- 最专业的Python社区，有每日推送，免费电子书，真人辅导，资源下载，各类工具。我已委托“维权骑士”（rightknights.com）为我的文章进行维权行动
 
@@ -21,7 +21,7 @@
 
 - [大邓和他的Python](#大邓和他的Python)：-文科生背景的哈工大在读博士，本公众号主要面向编程小白和人文社科类科研工作者，分享的内容涵盖python爬虫、文本数据编码、（文本）数据分析、金融量化、机器学习和深度学习。欢迎关注本号，写论文不再愁数据！
 
-
+- [Python开发者](#Python开发者)：-人生苦短，我用 Python。「Python开发者」分享 Python 相关的技术文章、工具资源、精选课程、热点资讯等。
 
 
  
@@ -83,6 +83,17 @@ DaDengAndHisPython
 文科生背景的哈工大在读博士，本公众号主要面向编程小白和人文社科类科研工作者，分享的内容涵盖python爬虫、文本数据编码、（文本）数据分析、金融量化、机器学习和深度学习。欢迎关注本号，写论文不再愁数据！
 
 ![](https://mp.weixin.qq.com/mp/qrcode?scene=10000005&size=102&__biz=MzI1MTE2ODg4MA==&mid=2650070720&idx=1&sn=2ac78c04be23751d62e78caa92dc9b16&send_time=)
+
+
+
+### Python开发者 
+
+微信号：PythonCoder
+
+功能介绍：人生苦短，我用 Python。「Python开发者」分享 Python 相关的技术文章、工具资源、精选课程、热点资讯等。
+
+![](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzA4MjEyNTA5Mw==&mid=2652569348&idx=1&sn=97c1fdcf110c5b8a6338992a26b8a9ef&send_time=)
+
 
 
 
