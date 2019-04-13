@@ -13,6 +13,8 @@
 - [0x17execfile](#0x17execfile)
 - [0x22file](#0x22file)
 - [0x27filter](#0x27filter)
+- [0x32float](#0x32float)
+- [0x37format](#0x37format)
 
 
 # [0x01abs](0x01abs.py)
@@ -197,5 +199,50 @@ print(list(filter(func, a)))
 '''
 <filter object at 0x03685110>
 [0, 1, 2, 3, 4]
+'''
+```
+
+# [0x32float](#0x32float.py)
+
+将整数和字符串转换为浮点数
+
+``` python
+print(float(0))
+print(float(1))
+print(float(-1))
+print(float(1.002))
+print(float(1.0000))
+print(float('1.3'))
+
+# 输出结果：
+'''
+0.0
+1.0
+-1.0
+1.002
+1.0
+1.3
+'''
+```
+
+# [0x37format](#0x37format.py)
+
+格式化字符串，功能多于 `%`
+
+``` python 
+print("{}{}".format('hello', 'world'))
+# 不指定位置，默认从左往右
+
+print("{1}{0}".format('hello', 'world'))
+# 在大括号中指定顺序
+
+print("{user} {pawd}".format(user='admin', pawd='password'))
+# 指定参数
+
+# 输出结果：
+'''
+helloworld
+worldhello
+admin password
 '''
 ```

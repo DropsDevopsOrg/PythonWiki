@@ -1,0 +1,6 @@
+print(float(0))
+print(float(1))
+print(float(-1))
+print(float(1.002))
+print(float(1.0000))
+print(float('1.3'))
