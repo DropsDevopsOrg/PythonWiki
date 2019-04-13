@@ -3,14 +3,14 @@
 
 ## 目录：
 
-- [0x01abs](0x01abs)
+- [0x01abs](#0x01abs)
 
 
 
 
 
 
-### 0x01abs
+### [0x01abs](0x01abs.py)
 
 abs():求绝对值
 
