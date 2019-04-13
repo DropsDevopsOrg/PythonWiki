@@ -10,10 +10,10 @@
 - [0x02divmod](#0x02divmod)
 - [0x07enumerate](#0x07enumerate)
 - [0x12eval](#0x12eval)
+- [0x17exec](#0x17exec)
 
 
-
-### [0x01abs](0x01abs.py)
+# [0x01abs](0x01abs.py)
 
 abs():求绝对值
 
@@ -125,3 +125,35 @@ print(eval(safe))
 ```
 
 结果用户输入： `open('0x15divmod.py').read()`，则会输出这个文件中的内容，那么用户即可访问自己的所有文件；不仅是访问文件，还可进行其他操作
+
+# [0x17exec](#0x17exec.py)
+
+python3取消了execfile()函数
+
+exec():执行string类型变量存储的代码，并不输出结果
+
+``` python
+a = '(2+(2*4))/5'
+print(exec(a))
+print(eval(a))
+print('='*10)
+b = 'exp=(2+(2*4))/5'
+exec(b)
+print(exp)
+print(eval(b))
+
+# 输出结果：
+'''
+None
+2.0
+==========
+2.0
+Traceback (most recent call last):
+  File "C:\Users\腾飞\Desktop\研发\python3内置函数\0x18exec.py", line 8, in <module>
+    print(eval(b))
+  File "<string>", line 1
+    exp=(2+(2*4))/5
+       ^
+SyntaxError: invalid syntax
+'''
+```
