@@ -10,7 +10,9 @@
 - [0x02divmod](#0x02divmod)
 - [0x07enumerate](#0x07enumerate)
 - [0x12eval](#0x12eval)
-- [0x17exec](#0x17exec)
+- [0x17execfile](#0x17execfile)
+- [0x22file](#0x22file)
+- [0x27filter](#0x27filter)
 
 
 # [0x01abs](0x01abs.py)
@@ -126,7 +128,7 @@ print(eval(safe))
 
 结果用户输入： `open('0x15divmod.py').read()`，则会输出这个文件中的内容，那么用户即可访问自己的所有文件；不仅是访问文件，还可进行其他操作
 
-# [0x17exec](#0x17exec.py)
+# [0x17execfile](#0x17execfile.py)
 
 python3取消了execfile()函数
 
@@ -155,5 +157,45 @@ Traceback (most recent call last):
     exp=(2+(2*4))/5
        ^
 SyntaxError: invalid syntax
+'''
+```
+
+# [0x22file](#0x22file.py)
+
+file()可以创建一个file对象，同open()作用相同
+
+python3不支持file()函数了
+
+``` python
+f = open('0x22test.txt', 'r')
+print(f.readlines())
+
+# 输出结果：
+'''
+['hello\n', 'world']
+'''
+```
+
+# [0x27filter](#0x27filter.py)
+
+filter()函数用于过滤序列，返回一个迭代对象，可用list()转换为序列
+
+语法：`filter(function, iterable)`
+
+``` python
+def func(num):
+        if num < 5:
+                return 1
+        
+
+a = [x for x in range(10)]
+
+print(filter(func, a))
+print(list(filter(func, a)))
+
+# 输出结果：
+'''
+<filter object at 0x03685110>
+[0, 1, 2, 3, 4]
 '''
 ```
