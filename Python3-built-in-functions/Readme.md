@@ -7,9 +7,9 @@
 ## 目录：
 
 - [0x01abs](#0x01abs)
-
-
-
+- [0x02divmod](#0x02divmod)
+- [0x07enumerate](#0x07enumerate)
+- [0x12eval](#0x12eval)
 
 
 
@@ -38,3 +38,90 @@ abs(2e5):  200000.0
 复数： abs((1+2j)):  2.23606797749979
 '''
 ```
+
+
+# [0x02divmod](0x15divmod.py)
+divmod(a, b):返回一个元组，包含a除以b的商及余数
+
+``` python
+print(divmod(7,2))
+
+print(divmod(10,5))
+
+# 输出结果：
+'''
+(3, 1)
+(2, 0)
+'''
+```
+
+# [0x07enumerate](0x16enumerate.py)
+enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中
+
+``` python
+a = 'hello'
+
+print(enumerate(a))
+
+for i in enumerate(a):
+        print(i)
+
+for i, j in enumerate(a):
+        print(i, j)
+
+# 输出结果：
+'''
+<enumerate object at 0x03527508>
+(0, 'h')
+(1, 'e')
+(2, 'l')
+(3, 'l')
+(4, 'o')
+0 h
+1 e
+2 l
+3 l
+4 o
+'''
+```
+
+# [0x12eval](0x17eval.py)
+将字符串str当成有效的表达式来求值并返回计算结果
+
+``` python
+a = '((2 + 3*2)/2)'
+print(eval(a))
+
+b = 'input("please input a number: ")'
+print(eval(b))
+
+test1 = "['a','b','c','d']"
+print(eval(test1))
+print(type(eval(test1)))
+
+test2 = "{'a':'b'}"
+print(eval(test2))
+print(type(eval(test2)))
+
+# 输出结果：
+'''
+4.0
+please input a number: 5
+5
+['a', 'b', 'c', 'd']
+<class 'list'>
+{'a': 'b'}
+<class 'dict'>
+'''
+```
+
+这个函数也缺少安全性：
+
+如，想根据用户输入表达式来求值
+
+``` python
+safe = input('please input a expression: ')
+print(eval(safe))
+```
+
+结果用户输入： `open('0x15divmod.py').read()`，则会输出这个文件中的内容，那么用户即可访问自己的所有文件；不仅是访问文件，还可进行其他操作
