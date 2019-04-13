@@ -1,6 +1,9 @@
 
 ## Python3 内置函数学习
 
+![](https://raw.githubusercontent.com/Hatcat123/GraphicBed/master/Img/20190413200306.png)
+
+
 ## 目录：
 
 - [0x01abs](#0x01abs)

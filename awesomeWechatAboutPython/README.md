@@ -23,6 +23,8 @@
 
 - [Python开发者](#Python开发者)：-人生苦短，我用 Python。「Python开发者」分享 Python 相关的技术文章、工具资源、精选课程、热点资讯等。
 
+- [菜鸟学Python ](#菜鸟学Python )：-简简单单的Python教程,从入门，进阶技巧，爬虫数据分析，数据可视化等,以及经验和技巧的总结,趣味原创文章：破解九宫格，破解Google面试题，情人节选对象,微软面试题,弹球游戏,聊天机器人等,欢迎关注
+
 
  
 ## 模板：
@@ -94,7 +96,15 @@ DaDengAndHisPython
 
 ![](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzA4MjEyNTA5Mw==&mid=2652569348&idx=1&sn=97c1fdcf110c5b8a6338992a26b8a9ef&send_time=)
 
+### 菜鸟学Python
 
+微信号：cainiao_xueyuan
+
+功能介绍：简简单单的Python教程,从入门，进阶技巧，爬虫数据分析，数据可视化等,以及经验和技巧的总结,趣味原创文章：破解九宫格，破解Google面试题，情人节选对象,微软面试题,弹球游戏,聊天机器人等,欢迎关注
+
+![](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzIxNjM4NDE2MA==&mid=2247489705&idx=1&sn=e839cb359982446366d430ea83be1c78&send_time=)
+
+ 
 
 
 
