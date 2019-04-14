@@ -409,7 +409,7 @@ TypeError: 'float' object cannot be interpreted as an integer
 
 获取对象的内存地址
 
-Cpython(用C语言写的python)在编译优化时，会尝试使用以经存在的不可变对象而不是每次都创建一个新对象
+Cpython(用C语言写的python)在编译优化时，会尝试使用已经存在的不可变对象而不是每次都创建一个新对象
 
 ``` python
 a = 'some_string'
