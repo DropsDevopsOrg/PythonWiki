@@ -387,6 +387,8 @@ print(help('str'))
 print(hex(1))
 print(hex(10))
 print(hex(100))
+print(hex(257))
+
 print(hex(1.0))
 
 # 输出结果：
@@ -394,6 +396,7 @@ print(hex(1.0))
 0x1
 0xa
 0x64
+0x101
 Traceback (most recent call last):
   File "C:\Users\腾飞\Desktop\研发\PythonWiki\Python3-built-in-functions\0x72hex.py", line 4, in <module>
     print(hex(1.0))
