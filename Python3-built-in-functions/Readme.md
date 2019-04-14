@@ -15,6 +15,14 @@
 - [0x27filter](#0x27filter)
 - [0x32float](#0x32float)
 - [0x37format](#0x37format)
+- [0x42frozenset](#0x42frozenset)
+- [0x47getattr](#0x47getattr)
+- [0x52globals](#0x52globals)
+- [0x57hasattr](#0x57hasattr)
+- [0x62hash](#0x62hash)
+- [0x67help](#0x67help)
+- [0x72hex](#0x72hex)
+- [0x77id](#0x77id)
 
 
 # [0x01abs](0x01abs.py)
@@ -244,5 +252,175 @@ print("{user} {pawd}".format(user='admin', pawd='password'))
 helloworld
 worldhello
 admin password
+'''
+```
+
+# [0x42frozenset](#0x42frozenset.py)
+
+将可迭代对象设置成冻结的集合；无参数会返回空集合
+
+``` python
+a = [1, 2, 3]
+b = frozenset(a)
+print(b)
+print(frozenset())
+
+# 输出结果：
+'''
+frozenset({1, 2, 3})
+frozenset()
+'''
+```
+
+# [0x47getattr](#0x47getattr.py)
+
+返回一个对象的属性值
+
+```
+class Test():
+        color = 'white'
+
+
+a1 = Test()
+print(getattr(a1, 'color')) 
+# 如果属性名存在则返回其值
+
+a2 = Test()
+print(getattr(a2, 'say', 'chinese')) 
+# 如果属性名不存在则返回设定的返回值
+
+a3 = Test()
+print(getattr(a3, 'other')) 
+# 属性名不存在且没有设定返回值则会报错
+
+# 输出结果：
+'''
+white
+chinese
+Traceback (most recent call last):
+  File "C:\Users\腾飞\Desktop\研发\PythonWiki\Python3-built-in-functions\0x47getattr.py", line 12, in <module>
+    print(getattr(a3, 'other'))
+AttributeError: 'Test' object has no attribute 'other'
+'''
+```
+
+# [0x52globals](#0x52globals.py)
+
+globals()函数以字典形式返回当前位置的所有全局变量
+
+``` python
+a = 'hello'
+b = 'world'
+
+print(globals())
+
+# 输出结果：
+'''
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'C:\\Users\\腾飞\\Desktop\\研发\\PythonWiki\\Python3-built-in-functions\\0x52globals.py', 'a': 'hello', 'b': 'world'}
+'''
+```
+
+# [0x57hasattr](#0x57hasattr.py)
+
+判断对象是否包含某个属性，如果包含返回True，否则返回False
+
+``` python
+class Test():
+        color = 'white'
+
+
+a1 = Test()
+print(hasattr(a1, 'color'))
+
+print(hasattr(a1, 'say'))
+
+# 输出结果：
+'''
+True
+False
+'''
+```
+
+# [0x62hash](#0x62hash.py)
+
+返回一个对象的哈希值；对象可以是整型、字符串，但不能直接用于列表、字典等
+
+具有相同值的对象具有相同的hash值；对象的hash值不仅与对象的内容有关，还与对象的内存地址有关
+
+``` python
+a = 1
+b = 1.0
+print(hash(a))
+print(hash(b))
+
+c = 'hello'
+d = 'world'
+print(hash(c))
+print(hash(d))
+print(hash('今天是个好日子'))
+# 输出结果：
+'''
+1
+1
+1604966843
+1326011668
+-1235082111
+'''
+```
+
+# [0x67help](#0x67help.py)
+
+返回函数或模块的详细说明
+
+``` python
+print(help('str'))
+
+# 输出结果太多，省略...
+```
+
+
+# [0x72hex](#0x72hex.py)
+
+将整型数字转换为其对应的16进制，结果并不是固定长度
+
+``` python
+print(hex(1))
+print(hex(10))
+print(hex(100))
+print(hex(1.0))
+
+# 输出结果：
+'''
+0x1
+0xa
+0x64
+Traceback (most recent call last):
+  File "C:\Users\腾飞\Desktop\研发\PythonWiki\Python3-built-in-functions\0x72hex.py", line 4, in <module>
+    print(hex(1.0))
+TypeError: 'float' object cannot be interpreted as an integer
+'''
+```
+
+
+# [0x77id](#0x77id.py)
+
+获取对象的内存地址
+
+Cpython(用C语言写的python)在编译优化时，会尝试使用以经存在的不可变对象而不是每次都创建一个新对象
+
+``` python
+a = 'some_string'
+b = 'some' + '_' + 'string'
+c = 'somestring'
+
+print(id(a))
+print(id(b))
+print(id(c))
+
+# 输出结果：
+'''
+56522176
+56522176
+56522776
 '''
 ```
