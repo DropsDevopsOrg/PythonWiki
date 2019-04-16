@@ -8,21 +8,37 @@
 
 - [0x01abs](#0x01abs)
 - [0x02divmod](#0x02divmod)
+- [0x03input](#0x03input)
 - [0x07enumerate](#0x07enumerate)
+- [0x08int](#0x08int)
 - [0x12eval](#0x12eval)
+- [0x13isinstance](#0x13isinstance)
 - [0x17execfile](#0x17execfile)
+- [0x18issubclass](#0x18issubclass)
 - [0x22file](#0x22file)
+- [0x23iter](#0x23iter)
 - [0x27filter](#0x27filter)
+- [0x28len](#0x28len)
 - [0x32float](#0x32float)
+- [0x33list](#0x33list)
 - [0x37format](#0x37format)
+- [0x38locals](#0x38locals)
 - [0x42frozenset](#0x42frozenset)
+- [0x43long](#0x43long)
 - [0x47getattr](#0x47getattr)
+- [0x48map](#0x48map)
 - [0x52globals](#0x52globals)
+- [0x53max](#0x53max)
 - [0x57hasattr](#0x57hasattr)
+- [0x58memoryview](#0x58memoryview)
 - [0x62hash](#0x62hash)
+- [0x63min](#0x63min)
 - [0x67help](#0x67help)
+- [0x68next](#0x68next)
 - [0x72hex](#0x72hex)
+- [0x73object](#0x73object)
 - [0x77id](#0x77id)
+- [0x78oct](#0x78oct)
 
 
 # [0x01abs](0x01abs.py)
@@ -67,6 +83,40 @@ print(divmod(10,5))
 '''
 ```
 
+# [0x03input](0x03input.py)
+
+input()：接受输入数据，返回类型为string，后面加上.split()方法可接受多个数据输入
+
+```
+
+a = input("请输入：")
+
+print(a, type(a))
+
+a,b = input("请输入至少两个数据：").split()#多个数据输入
+
+print(a, b)
+
+name, age, QQ = input("请输入姓名，年龄，QQ号码:").split()
+
+print("姓名：%s, 年龄：%s, QQ号码：%s" %(name, age, QQ))
+
+#输出结果
+请输入：1
+
+<class 'str'> 1
+
+请输入至少两个数据：1 2
+
+1 2
+
+请输入姓名，年龄，QQ号码:2 12 45648
+
+姓名：2, 年龄：12, QQ号码：45648
+
+
+```
+
 # [0x07enumerate](0x16enumerate.py)
 enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中
 
@@ -95,6 +145,34 @@ for i, j in enumerate(a):
 3 l
 4 o
 '''
+```
+# [0x08int](0x08int.py)
+
+int() 函数用于将一个字符串或数字转换为整型,后面可跟进制类型
+
+```
+
+print(int())    #空转换成为
+
+print(int(3.6)) #转换浮点型，不会四舍五入
+
+print(int('123465'))    #转换字符串
+
+print(int('110', 2))    #把2进制的110转换成十进制
+
+print(int("12", 8))     #把8进制的12转换成十进制
+
+print(int("12", 16))    #把16进制的12转换成十进制
+
+
+#输出结果
+0
+3
+123465
+6
+10
+18
+
 ```
 
 # [0x12eval](0x17eval.py)
@@ -138,6 +216,36 @@ print(eval(safe))
 
 结果用户输入： `open('0x15divmod.py').read()`，则会输出这个文件中的内容，那么用户即可访问自己的所有文件；不仅是访问文件，还可进行其他操作
 
+# [0x13isinstance](0x13isinstance.py)
+isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type(),另外isinstance判断对象是否为某一类型,返回true或false
+
+```
+a = 3
+
+print(type(a))
+
+str0 = "liang"
+
+print(type(str0))
+
+print(isinstance(a, int))
+
+print(isinstance(a, str))
+
+print(isinstance(str0, str))
+
+#输出结果
+<class 'int'>
+
+<class 'str'>
+
+True
+
+False
+
+True
+```
+
 # [0x17execfile](#0x17execfile.py)
 
 python3取消了execfile()函数
@@ -170,6 +278,27 @@ SyntaxError: invalid syntax
 '''
 ```
 
+# [0x18issubclass](#0x18issubclass.py)
+issubclass(A,B) 方法用于判断参数A是否是类型参数B的子类,是则返回true，否则返回false
+```
+class A:
+    pass
+class B(A):
+    pass
+class C:
+    pass
+print(issubclass(B, A))  # 返回 True
+print(issubclass(C, A))  #返回false
+
+#运行结果
+"""
+True
+False
+
+"""
+```
+
+
 # [0x22file](#0x22file.py)
 
 file()可以创建一个file对象，同open()作用相同
@@ -186,6 +315,50 @@ print(f.readlines())
 '''
 ```
 
+# [0x23iter](#0x23iter.py)
+iter()用来生成迭代器，参数为支持可迭代的对象
+
+```
+字符串
+s = 'qerty'
+for i in iter(s):
+    print(i)
+列表
+l = [1, 2, 3, 4]
+for i in iter(l):
+    print(i,end='\t')
+print('\n')
+元祖
+m = (1, 2, 3, 4)
+for i in iter(m):
+    print(i,end='\t')
+print('\n')
+字典
+n = {'id': 1, "name": "liang", "user": "admin", "passworld": "123456"}
+for i in iter(n):       #默认打印键名
+    print(i)
+for i in iter(n.values()):  #打印值
+    print(i)
+    
+#运行结果
+"""
+q
+e
+r
+t
+y
+1	2	3	4	
+1	2	3	4	
+id
+name
+user
+passworld
+1
+liang
+admin
+123456
+"""
+```
 # [0x27filter](#0x27filter.py)
 
 filter()函数用于过滤序列，返回一个迭代对象，可用list()转换为序列
@@ -208,6 +381,27 @@ print(list(filter(func, a)))
 <filter object at 0x03685110>
 [0, 1, 2, 3, 4]
 '''
+```
+
+# [0x28len](#0x28len.py)
+len() 方法返回对象（字符、列表、元组等）长度
+```
+数组类型
+print(len([1, 2, 3, 4, 5, 6]))
+元祖类型
+print(len((1, 2, 3, 4, 5, )))
+字典类型
+print(len({'id': 1, "user": "admin", "password": "123465"}))
+字符串类型
+print(len('efarg  gg g'))
+
+#运行结果
+"""
+6
+5
+3
+11
+"""
 ```
 
 # [0x32float](#0x32float.py)
@@ -233,6 +427,25 @@ print(float('1.3'))
 '''
 ```
 
+# [0x33list](#0x33list.py)
+list()将元组或字符串转换成列表
+```
+a = (1,2,3)
+print(a)
+print(list(a))
+b = "liangweiyang"
+print(b)
+print(list(b))
+
+#运行结果
+"""
+(1, 2, 3)
+[1, 2, 3]
+liangweiyang
+['l', 'i', 'a', 'n', 'g', 'w', 'e', 'i', 'y', 'a', 'n', 'g']
+"""
+```
+
 # [0x37format](#0x37format.py)
 
 格式化字符串，功能多于 `%`
@@ -255,6 +468,20 @@ admin password
 '''
 ```
 
+# [0x38locals](#0x38locals.py)
+locals() 函数会以字典类型返回当前位置的全部局部变量,不需要参数,变量为为键，变量的值为键的值
+```
+def func(): #在函数内部定义两个局部变量
+    s = 1
+    y = 2
+    print(locals())
+
+func()      #调用自定义方法
+
+#运行结果
+{'s': 1, 'y': 2}
+```
+
 # [0x42frozenset](#0x42frozenset.py)
 
 将可迭代对象设置成冻结的集合；无参数会返回空集合
@@ -270,6 +497,18 @@ print(frozenset())
 frozenset({1, 2, 3})
 frozenset()
 '''
+```
+
+# [0x43long](#0x43long.py)
+long() 函数将数字或字符串转换为一个长整型
+```
+a = 123
+print(type(a))
+print(type(long(a)))
+
+s = '456'
+print(type(s))
+print(type(long(b)))
 ```
 
 # [0x47getattr](#0x47getattr.py)
@@ -304,6 +543,24 @@ AttributeError: 'Test' object has no attribute 'other'
 '''
 ```
 
+# [0x48map.py](#0x48map.py)
+会根据提供的函数对指定序列做映射。第一个参数是函数，第二个参数是序列
+```
+def square(x):
+    return x**2
+ls = [1, 2, 3]
+
+for i in map(square, ls):
+    print(i)
+
+#运行结果
+"""
+1
+4
+9
+"""
+```
+
 # [0x52globals](#0x52globals.py)
 
 globals()函数以字典形式返回当前位置的所有全局变量
@@ -318,6 +575,25 @@ print(globals())
 '''
 {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'C:\\Users\\腾飞\\Desktop\\研发\\PythonWiki\\Python3-built-in-functions\\0x52globals.py', 'a': 'hello', 'b': 'world'}
 '''
+```
+
+# [0x53max](#0x53max.py)
+max() 方法返回给定参数的最大值，可比较字符.汉字和表达式
+```
+print(max(1, 2, 3, 45, 4))
+print(max([1, 2, 3, 4, 5, 6]))
+print(max('a', 'b', 'c', 'd'))
+print(max('梁', '伟', '洋'))
+print(max(8+2, 1+1, 9+9))
+
+#运行结果
+"""
+45
+6
+d
+洋
+18
+"""
 ```
 
 # [0x57hasattr](#0x57hasattr.py)
@@ -339,6 +615,20 @@ print(hasattr(a1, 'say'))
 True
 False
 '''
+```
+
+# [0x58memoryview](#0x58memoryview.py)
+memoryview() 函数返回给定参数的内存查看对象，这个找了一下资料，自己也没看太懂
+```
+v = memoryview(bytearray("abcefg", 'utf-8'))
+print(type(v))
+print(v[1])
+
+#运行结果
+"""
+<class 'memoryview'>
+98
+"""
 ```
 
 # [0x62hash](#0x62hash.py)
@@ -368,6 +658,25 @@ print(hash('今天是个好日子'))
 '''
 ```
 
+# [0x63min](#0x63min.py)
+min()方法返回给定参数的最小值，可比较字符.汉字和表达式
+```
+print(min(1, 2, 3, 45, 4))
+print(min([1, 2, 3, 4, 5, 6]))
+print(min('a', 'b', 'c', 'd'))
+print(min('梁', '伟', '洋'))
+print(min(8+2, 1+1, 9+9))
+
+#运行结果
+"""
+1
+1
+a
+伟
+2
+"""
+```
+
 # [0x67help](#0x67help.py)
 
 返回函数或模块的详细说明
@@ -376,6 +685,24 @@ print(hash('今天是个好日子'))
 print(help('str'))
 
 # 输出结果太多，省略...
+```
+
+# [0x68next](#0x68next.py)
+next()返回迭代器的下一项
+```
+l = [1, 2, 3, 4]
+li = iter(l)
+for i in l:
+    y = next(li)
+    print(y)
+    
+#运行结果
+"""
+1
+2
+3
+4
+"""
 ```
 
 
@@ -404,6 +731,25 @@ TypeError: 'float' object cannot be interpreted as an integer
 '''
 ```
 
+# [0x73object](#0x73object.py)
+Object类是Python中所有类的基类，如果定义一个类时没有指定继承那个类，则默认继承object类
+```
+class A:
+    pass
+class B(A):
+    pass
+print(issubclass(A, object))
+print(issubclass(B, A))
+print(issubclass(B, object))
+
+#运行结果
+"""
+True
+True
+True
+"""
+```
+
 
 # [0x77id](#0x77id.py)
 
@@ -426,4 +772,17 @@ print(id(c))
 56522176
 56522776
 '''
+```
+
+# [0x78oct](#0x78oct.py)
+oct() 函数将一个整数转换成8进制字符串,返回字符串类型
+```
+print(oct(16))
+print(type(oct(10)))
+
+#运行结果
+"""
+0o20
+<class 'str'>
+"""
 ```
