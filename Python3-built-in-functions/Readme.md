@@ -39,6 +39,7 @@
 - [0x73object](#0x73object)
 - [0x77id](#0x77id)
 - [0x78oct](#0x78oct)
+- [0x79open](#0x79open)
 
 
 # [0x01abs](0x01abs.py)
@@ -786,7 +787,8 @@ print(type(oct(10)))
 <class 'str'>
 """
 ```
-# [0x79oct](#0x79open.py)
+# [0x79open](#0x79open.py)
+open()函数打开文件，并返回文件标识符
 ```
 fp=open("test.txt","w")
 """
