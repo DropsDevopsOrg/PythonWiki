@@ -787,6 +787,7 @@ print(type(oct(10)))
 """
 ```
 # [0x79oct](#0x79open.py)
+```
 fp=open("test.txt","w")
 """
 原型open(param1[,param2])
@@ -804,3 +805,4 @@ r 表示读文件
 返回打开文件的标识符
 
 """
+```
