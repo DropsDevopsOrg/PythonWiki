@@ -26,6 +26,7 @@
 - [菜鸟学Python ](#菜鸟学Python )：-简简单单的Python教程,从入门，进阶技巧，爬虫数据分析，数据可视化等,以及经验和技巧的总结,趣味原创文章：破解九宫格，破解Google面试题，情人节选对象,微软面试题,弹球游戏,聊天机器人等,欢迎关注
 
 
+- [Python小屋](#Python小屋)：-《Python程序设计(第2版)》《Python程序设计基础(第2版)》《Python可以这样学》《Python程序设计开发宝典》系列教材作者董付国老师的Python小屋,介绍Python语法基础、标准库、扩展库以及在各领域的应用.
  
 ## 模板：
 
@@ -105,6 +106,16 @@ DaDengAndHisPython
 ![](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzIxNjM4NDE2MA==&mid=2247489705&idx=1&sn=e839cb359982446366d430ea83be1c78&send_time=)
 
  
+### Python小屋
+
+微信号：Python_xiaowu
+功能介绍：《Python程序设计(第2版)》《Python程序设计基础(第2版)》《Python可以这样学》《Python程序设计开发宝典》系列教材作者董付国老师的Python小屋,介绍Python语法基础、标准库、扩展库以及在各领域的应用.
+
+![](https://mp.weixin.qq.com/rr?timestamp=1555859617&src=3&ver=1&signature=UBYi49Mw2evVlXueaNvPNCmMIQpWe6OA6yk9Zx47tKUREtJo3uK7TRvjLUq-KR5aPDGsa----iFHCnNAh7xPDg9N3F522Dv3KmSXEUhw7hQ=)
+
+
+
+
 
 
 
