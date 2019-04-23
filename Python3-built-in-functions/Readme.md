@@ -119,7 +119,7 @@ print("姓名：%s, 年龄：%s, QQ号码：%s" %(name, age, QQ))
 
 
 ```
-# [0x05staticmethod](0x05staticmethod)
+# [0x05staticmethod](0x05staticmethod.py)
 staticmethod()函数可以将一个类不用实例化就可以调用它的方法
 ```
 class C(object):
