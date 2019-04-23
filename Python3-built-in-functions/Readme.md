@@ -12,6 +12,7 @@
 - [0x05staticmethod](#0x05staticmethod)
 - [0x07enumerate](#0x07enumerate)
 - [0x08int](#0x08int)
+- [0x10str](#0x10str)
 - [0x12eval](#0x12eval)
 - [0x13isinstance](#0x13isinstance)
 - [0x17execfile](#0x17execfile)
@@ -193,7 +194,19 @@ print(int("12", 16))    #把16进制的12转换成十进制
 18
 
 ```
-
+# [0x10str](0x10str.py)
+str()函数将返回一个str类型
+```
+dict = {'runnob':'runnob.com','google':'google.com'}
+print(type(dict))
+a = str(dict)
+print(a)
+print(type(a))
+#输出结果
+<class 'dict'>
+{'runnob': 'runnob.com', 'google': 'google.com'}
+<class 'str'>
+```
 # [0x12eval](0x17eval.py)
 将字符串str当成有效的表达式来求值并返回计算结果
 
