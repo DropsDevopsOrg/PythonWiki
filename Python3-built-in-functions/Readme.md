@@ -9,6 +9,7 @@
 - [0x01abs](#0x01abs)
 - [0x02divmod](#0x02divmod)
 - [0x03input](#0x03input)
+- [0x05staticmethod](#0x05staticmethod)
 - [0x07enumerate](#0x07enumerate)
 - [0x08int](#0x08int)
 - [0x12eval](#0x12eval)
@@ -117,6 +118,23 @@ print("姓名：%s, 年龄：%s, QQ号码：%s" %(name, age, QQ))
 
 
 ```
+# [0x05staticmethod](0x05staticmethod)
+staticmethod()函数可以将一个类不用实例化就可以调用它的方法
+```
+class C(object):
+    @staticmethod
+    def f():
+        print('runoob');
+ 
+C.f();          # 静态方法无需实例化
+cobj = C()
+cobj.f()        # 也可以实例化后调用class C(object):
+
+#输出结果
+runnob
+runnob
+```
+
 
 # [0x07enumerate](0x16enumerate.py)
 enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中
