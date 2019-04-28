@@ -15,16 +15,21 @@
 - [0x10str](#0x10str)
 - [0x12eval](#0x12eval)
 - [0x13isinstance](#0x13isinstance)
+- [0x15sum](#0x15sum)
 - [0x17execfile](#0x17execfile)
 - [0x18issubclass](#0x18issubclass)
+- [0x20super](#0x20super)
 - [0x22file](#0x22file)
 - [0x23iter](#0x23iter)
 - [0x27filter](#0x27filter)
 - [0x28len](#0x28len)
+- [0x30type](#0x30type)
 - [0x32float](#0x32float)
 - [0x33list](#0x33list)
+- [0x35vars](#0x35vars)
 - [0x37format](#0x37format)
 - [0x38locals](#0x38locals)
+- [0x40zip](#0x40zip)
 - [0x42frozenset](#0x42frozenset)
 - [0x43long](#0x43long)
 - [0x47getattr](#0x47getattr)
@@ -277,6 +282,21 @@ False
 
 True
 ```
+# [0x15sum](#0x15sum.py)
+sum函数返回求和的值
+```
+a = sum([0,1,2])
+print(a)
+b = sum((2,3,4),1)
+print(b)
+c = sum([0,1,2,3,4],2)
+print(c)
+#输出结果
+3
+10
+12
+
+```
 
 # [0x17execfile](#0x17execfile.py)
 
@@ -391,6 +411,16 @@ admin
 123456
 """
 ```
+# [0x25tuple](#0x25tuple.py)
+tuple()函数可以将列表转化为元组
+```
+list1 = ['Google','Taobao','Runnob','Baidu']
+tuple1 = tuple(list1)
+print(tuple1)
+#输出结果
+('Google','Taobao','Runnob','Baidu')
+
+```
 # [0x27filter](#0x27filter.py)
 
 filter()函数用于过滤序列，返回一个迭代对象，可用list()转换为序列
@@ -435,6 +465,19 @@ print(len('efarg  gg g'))
 11
 """
 ```
+# [0x30type](#0x30type.py)
+type()函数返回参数的类型
+```
+print(type(1))
+print(type('runnob'))
+print(type([2]))
+print(type({0:'zero'}))
+#输出结果
+int
+str
+list
+dict
+```
 
 # [0x32float](#0x32float.py)
 
@@ -476,6 +519,20 @@ print(list(b))
 liangweiyang
 ['l', 'i', 'a', 'n', 'g', 'w', 'e', 'i', 'y', 'a', 'n', 'g']
 """
+```
+# [0x35vars](#0x35vars.py)
+vars()函数返回object的属性和属性值的字典对象
+```
+print(vars())
+class Runnoob:
+    a = 1
+print(vars(Runnoob))
+runnoob = Runnoob()
+print(vars(runnoob))
+#输出结果
+略
+{'a': 1, '__module__': '__main__', '__doc__': None}
+{}
 ```
 
 # [0x37format](#0x37format.py)
