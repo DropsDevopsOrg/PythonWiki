@@ -111,7 +111,7 @@ DaDengAndHisPython
 微信号：Python_xiaowu
 功能介绍：《Python程序设计(第2版)》《Python程序设计基础(第2版)》《Python可以这样学》《Python程序设计开发宝典》系列教材作者董付国老师的Python小屋,介绍Python语法基础、标准库、扩展库以及在各领域的应用.
 
-![](https://mp.weixin.qq.com/rr?timestamp=1555859617&src=3&ver=1&signature=UBYi49Mw2evVlXueaNvPNCmMIQpWe6OA6yk9Zx47tKUREtJo3uK7TRvjLUq-KR5aPDGsa----iFHCnNAh7xPDg9N3F522Dv3KmSXEUhw7hQ=)
+
 
 
 
