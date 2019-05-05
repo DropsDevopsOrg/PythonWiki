@@ -1,0 +1,6 @@
+a = sum([0,1,2])
+print(a)
+b = sum((2,3,4),1)
+print(b)
+c = sum([0,1,2,3,4],2)
+print(c)
