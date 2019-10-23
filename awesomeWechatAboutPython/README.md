@@ -1,3 +1,5 @@
+此部分不再单独维护，每次需要手动更改实为繁琐。主要精力放在了一个更好的库上面[DropsOfZut/awesome-security-weixin-official-accounts](https://github.com/DropsOfZut/awesome-security-weixin-official-accounts)，自动化更新将会提高效率
+
 ## 微信公众号
 
 介绍：一些关于python学习的微信公众号，排名不分先后
